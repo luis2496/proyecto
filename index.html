@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <html lang="es"> 
+        <head>
+          <title> Mi primera  pagina web</title>
+       
+           <script>
+            function validarFormulario(){
+        
+             var txtCodigo = document.getElementById('codigo').value;
+             var txtEdad = document.getElementById('edad').value;
+    
+               //Test campo obligatorio
+             if(txtCodigo == null || txtCodigo.length == 0 || /^\s+$/.test(txtCodigo)){
+              alert('ERROR: El campo codigo no debe ir vacio o lleno de solamente espacios en blanco');
+              return false;
+              }
+     
+              //Test edad
+              if(txtEdad == null || txtEdad.length == 0 || isNaN(txtEdad)){
+              alert('ERROR: Debe ingresar una edad')
+               return false;
+              }
+    
+            </script>
+             </head>
+    
+        <body>
+          <hr/>
+          <!--permite justifcar el parrafo al centro-->
+          
+          <div align="CENTER"> <big>practica 6b </big> </div>
+           <p><big><b>Formulario</b></big></p>
+           <hr/>
+    
+           <form action="formularioValidado.html" onsubmit="return validarFormulario()">
+    
+            <br>
+            <label for="codigo"><b>Ingrese su codigo:</b></label>
+             <input type="text" placeholder="ingrese tu codigo" size="20" maxlength="4" name="codigo" id="codigo"> 
+            <br>
+    
+            <br>
+           <label for="nomb"><b>Ingrese su Nombre:</b></label>
+           <input type="text" placeholder="escribe tu nombre" size="20" maxlength="20" name="nombre" id="nombre">
+           <br>
+    
+           <br>
+           <label for="apellido"><b>Ingrese su Apellido:</b></label>
+           <input type="text" placeholder="escribe tu apellido" size="20"maxlength="20" name="apellido"> 
+           <br>
+    
+           <br>
+           <label for="edad"><b>Ingrese su edad: </b></label>
+           <input type="text" placeholder="escribe tu edad" size="10" maxlength="2" name="edad" id="edad">
+           <br>
+        
+            <br>
+            <label for="depart"> <b>Departamento:</b> </label>
+            <select name="depart" id="depart">
+            <option value="">---------</option>
+            <option value="compras">compras</option>
+            <option value="pedidos">pedidos</option>
+            <option value="marketing">marketing</option>
+            <option value="ventas">ventas</option>
+            <option value="produccion">produccion</option>
+            </select>
+            <br>
+            <hr/>
+    
+            <br>
+           <label for="genero"><b>Genero:</b> </label>
+           <input type="radio" name="genero" id="genero">M
+           <input type="radio" name="genero" id="genero">F
+           <br>
+           
+           <br>
+           <label for="venz"> <b>velezolano:</b> </label>
+           <input type="radio" name="venz" id="venz">SI
+           <input type="radio" name="venz" id="venz">NO
+           <br>
+    
+          <br>
+          <input type="submit" value="grabar" name="grabar">
+          
+          <br>
+           </form>
+    
+          
+                
+          <hr/>
+       </body>
+          
+    <cite>luis castillo ci:24156898 &trade;</cite>
+         
+
+</body>
+</html>
